@@ -16,7 +16,7 @@ Options:
   -h --help         Show this screen.
 DOC;
 
-(new Docopt\Handler())->handle($doc);
+$args = (new Docopt\Handler())->handle($doc);
 
 if ($args['classes']) {
     Heyday\clear_class_manifest();

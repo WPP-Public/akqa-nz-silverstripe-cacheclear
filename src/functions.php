@@ -7,16 +7,17 @@ namespace Heyday;
  * @return void
  */
 function clear_class_manifest() {
-    new \SS_ClassManifest(BASE_PATH, false, true);
+    $manifest = new \SS_ClassManifest(BASE_PATH, false, true);
+    $manifest->regenerate(true);
 }
-
 
 /**
  * Clears the cached statics manifest
  * @return void
  */
 function clear_config_static_manifest() {
-    new \SS_ConfigStaticManifest(BASE_PATH, false, true);
+    $manifest = new \SS_ConfigStaticManifest(BASE_PATH, false, true);
+    $manifest->regenerate(true);
 }
 
 
@@ -25,7 +26,8 @@ function clear_config_static_manifest() {
  * @return void
  */
 function clear_config_manifest() {
-    new \SS_ConfigManifest(BASE_PATH, false, true);
+    $manifest = new \SS_ConfigManifest(BASE_PATH);
+    $manifest->regenerate(false, true);
 }
 
 
@@ -35,5 +37,6 @@ function clear_config_manifest() {
  * @return void
  */
 function clear_template_manifest($project = 'mysite') {
-    new \SS_TemplateManifest(BASE_PATH, $project, false, true);
+    $manifest = new \SS_TemplateManifest(BASE_PATH, $project);
+    $manifest->regenerate(true);
 }
