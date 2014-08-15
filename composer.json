@@ -2,6 +2,7 @@
 	"name": "heyday/silverstripe-cacheclear",
 	"description": "More fine grained cache clearing",
 	"license": "MIT",
+	"type": "silverstripe-module",
 	"authors": [
 		{
 			"name": "Cam Spiers",
