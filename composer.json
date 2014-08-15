@@ -1,6 +1,6 @@
 {
 	"name": "heyday/silverstripe-cacheclear",
-	"description": "More fine grained cache clearing",
+	"description": "Fine grained and safe cache clearing",
 	"license": "MIT",
 	"type": "silverstripe-module",
 	"authors": [

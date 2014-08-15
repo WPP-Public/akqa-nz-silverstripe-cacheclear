@@ -11,6 +11,7 @@ Usage:
   cacheclear statics
   cacheclear config
   cacheclear templates
+  cacheclear all
 
 Options:
   -h --help         Show this screen.
@@ -20,10 +21,24 @@ $args = (new Docopt\Handler())->handle($doc);
 
 if ($args['classes']) {
     Heyday\clear_class_manifest();
+    echo 'Done'.PHP_EOL;
 } elseif ($args['statics']) {
     Heyday\clear_config_static_manifest();
+    Heyday\clear_class_manifest();
+    echo 'Done'.PHP_EOL;
 } elseif ($args['config']) {
     Heyday\clear_config_manifest();
+    Heyday\clear_class_manifest();
+    echo 'Done'.PHP_EOL;
 } elseif ($args['templates']) {
     Heyday\clear_template_manifest();
+    Heyday\clear_class_manifest();
+    echo 'Done'.PHP_EOL;
+} elseif ($args['all']) {
+    Heyday\clear_class_manifest();
+    Heyday\clear_config_static_manifest();
+    Heyday\clear_config_manifest();
+    Heyday\clear_template_manifest();
+    Heyday\clear_class_manifest();
+    echo 'Done'.PHP_EOL;
 }
