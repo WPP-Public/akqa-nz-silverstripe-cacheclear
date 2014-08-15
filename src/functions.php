@@ -7,7 +7,7 @@ namespace Heyday;
  * @return void
  */
 function clear_class_manifest() {
-    $manifest = new \SS_ClassManifest(BASE_PATH, false, true);
+    $manifest = new \SS_ClassManifest(BASE_PATH);
     $manifest->regenerate(true);
 }
 
@@ -16,7 +16,7 @@ function clear_class_manifest() {
  * @return void
  */
 function clear_config_static_manifest() {
-    $manifest = new \SS_ConfigStaticManifest(BASE_PATH, false, true);
+    $manifest = new \SS_ConfigStaticManifest(BASE_PATH);
     $manifest->regenerate(true);
 }
 
