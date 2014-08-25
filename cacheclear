@@ -35,7 +35,7 @@ if ($args['classes']) {
     Heyday\clear_class_manifest();
     Heyday\clear_config_static_manifest();
     Heyday\clear_config_manifest();
-    Heyday\clear_template_manifest();
+    Heyday\clear_templates();
     Heyday\clear_class_manifest();
     echo 'Done'.PHP_EOL;
 }
