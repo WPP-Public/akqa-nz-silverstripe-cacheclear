@@ -36,7 +36,8 @@ function clear_config_manifest() {
  * @param string $project
  * @return void
  */
-function clear_template_manifest($project = 'mysite') {
+function clear_templates($project = 'mysite') {
     $manifest = new \SS_TemplateManifest(BASE_PATH, $project);
     $manifest->regenerate(true);
+    \SSViewer::flush_template_cache();
 }
